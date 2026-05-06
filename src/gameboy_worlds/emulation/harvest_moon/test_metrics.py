@@ -706,6 +706,21 @@ class NextToFireplaceSubgoal(AnyRegionMatchSubGoal):
         "next_to_fireplace_up",
     ]
 
+class FindLuckyMoneyTerminateMetric(RegionMatchTerminationMetric, TerminationMetric):
+    REQUIRED_PARSER = BaseHarvestMoonStateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_bottom"
+    _TERMINATION_TARGET_NAME = "found_lucky_money"
+
+class NextToClockSubgoal(AnyRegionMatchSubGoal):
+    NAME = "next_to_clock"
+    _NAMED_REGIONS = [
+        "item_clock_below",
+    ]
+    _TARGET_NAMES = [
+        "next_to_clock_up",
+    ]
+
 class FindRainyMoneyTerminateMetric(RegionMatchTerminationMetric, TerminationMetric):
     REQUIRED_PARSER = BaseHarvestMoonStateParser
 
@@ -842,6 +857,96 @@ class PickupChickenFodderSubgoal(AnyRegionMatchSubGoal):
 
 
 
+
+class HospitalEntranceTerminateMetric(RegionMatchTerminationMetric, TerminationMetric):
+    REQUIRED_PARSER = BaseHarvestMoonStateParser
+    _TERMINATION_NAMED_REGION = "screen_top_half"
+    _TERMINATION_TARGET_NAME = "in_hospital"
+
+class OutsideHospitalSubgoal(AnyRegionMatchSubGoal):
+    NAME = "outside_hospital"
+    _NAMED_REGIONS = [
+        "hospital_location",
+        "hospital_location",
+        "hospital_location",
+    ]
+    _TARGET_NAMES = [
+        "outside_hospital_up",
+        "outside_hospital_left",
+        "outside_hospital_right",
+    ]
+
+class ToolShopEntranceTerminateMetric(RegionMatchTerminationMetric, TerminationMetric):
+    REQUIRED_PARSER = BaseHarvestMoonStateParser
+    _TERMINATION_NAMED_REGION = "screen_top_half"
+    _TERMINATION_TARGET_NAME = "in_tool_shop"
+
+class OutsideToolShopSubgoal(AnyRegionMatchSubGoal):
+    NAME = "outside_tool_shop"
+    _NAMED_REGIONS = [
+        "tool_shop_location",
+        "tool_shop_location",
+        "tool_shop_location",
+    ]
+    _TARGET_NAMES = [
+        "outside_tool_shop_up",
+        "outside_tool_shop_left",
+        "outside_tool_shop_right",
+    ]
+
+class CarpenterEntranceTerminateMetric(RegionMatchTerminationMetric, TerminationMetric):
+    REQUIRED_PARSER = BaseHarvestMoonStateParser
+    _TERMINATION_NAMED_REGION = "screen_top_half"
+    _TERMINATION_TARGET_NAME = "in_carpenter"
+
+class OutsideCarpenterSubgoal(AnyRegionMatchSubGoal):
+    NAME = "outside_carpenter"
+    _NAMED_REGIONS = [
+        "carpenter_location",
+        "carpenter_location",
+        "carpenter_location",
+    ]
+    _TARGET_NAMES = [
+        "outside_carpenter_up",
+        "outside_carpenter_left",
+        "outside_carpenter_right",
+    ]
+
+class AnimalShopEntranceTerminateMetric(RegionMatchTerminationMetric, TerminationMetric):
+    REQUIRED_PARSER = BaseHarvestMoonStateParser
+    _TERMINATION_NAMED_REGION = "screen_top_half"
+    _TERMINATION_TARGET_NAME = "in_animal_shop"
+
+class OutsideAnimalShopSubgoal(AnyRegionMatchSubGoal):
+    NAME = "outside_animal_shop"
+    _NAMED_REGIONS = [
+        "animal_shop_location",
+        "animal_shop_location",
+        "animal_shop_location",
+    ]
+    _TARGET_NAMES = [
+        "outside_animal_shop_up",
+        "outside_animal_shop_left",
+        "outside_animal_shop_right",
+    ]
+
+class LibraryEntranceTerminateMetric(RegionMatchTerminationMetric, TerminationMetric):
+    REQUIRED_PARSER = BaseHarvestMoonStateParser
+    _TERMINATION_NAMED_REGION = "screen_top_half"
+    _TERMINATION_TARGET_NAME = "in_library"
+
+class OutsideLibrarySubgoal(AnyRegionMatchSubGoal):
+    NAME = "outside_library"
+    _NAMED_REGIONS = [
+        "library_location",
+        "library_location",
+        "library_location",
+    ]
+    _TARGET_NAMES = [
+        "outside_library_up",
+        "outside_library_left",
+        "outside_library_right",
+    ]
 
 class FlowerShopEntranceTerminateMetric(RegionMatchTerminationMetric, TerminationMetric):
     REQUIRED_PARSER = BaseHarvestMoonStateParser

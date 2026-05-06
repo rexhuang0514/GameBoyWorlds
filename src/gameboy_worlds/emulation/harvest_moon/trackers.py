@@ -93,6 +93,18 @@ from gameboy_worlds.emulation.harvest_moon.test_metrics import (
     NextToSecretGardenSignSubgoal,
     
     # HM2
+    HospitalEntranceTerminateMetric,
+    OutsideHospitalSubgoal,
+    ToolShopEntranceTerminateMetric,
+    OutsideToolShopSubgoal,
+    CarpenterEntranceTerminateMetric,
+    OutsideCarpenterSubgoal,
+    AnimalShopEntranceTerminateMetric,
+    OutsideAnimalShopSubgoal,
+    LibraryEntranceTerminateMetric,
+    OutsideLibrarySubgoal,
+    FindLuckyMoneyTerminateMetric,
+    NextToClockSubgoal,
     FlowerShopEntranceTerminateMetric,
     OutsideFlowerShop2Subgoal,
     SelectPotatoSeeds2Subgoal,
@@ -434,6 +446,30 @@ class HarvestMoon2CowBarnTracker(HarvestMoonTestTracker):
 class HarvestMoon2ChickenCoopTracker(HarvestMoonTestTracker):
     TERMINATION_TRUNCATION_METRIC = ChickenCoopTerminateMetric
     SUBGOAL_METRIC = make_subgoal_metric_class([OutsideChickenCoop2Subgoal])
+
+class HarvestMoon2FindLuckyMoneyTracker(HarvestMoonTestTracker):
+    TERMINATION_TRUNCATION_METRIC = FindLuckyMoneyTerminateMetric
+    SUBGOAL_METRIC = make_subgoal_metric_class([NextToClockSubgoal])
+
+class HarvestMoon2HospitalEntranceTracker(HarvestMoonTestTracker):
+    TERMINATION_TRUNCATION_METRIC = HospitalEntranceTerminateMetric
+    SUBGOAL_METRIC = make_subgoal_metric_class([OutsideHospitalSubgoal])
+
+class HarvestMoon2ToolShopEntranceTracker(HarvestMoonTestTracker):
+    TERMINATION_TRUNCATION_METRIC = ToolShopEntranceTerminateMetric
+    SUBGOAL_METRIC = make_subgoal_metric_class([OutsideToolShopSubgoal])
+
+class HarvestMoon2CarpenterEntranceTracker(HarvestMoonTestTracker):
+    TERMINATION_TRUNCATION_METRIC = CarpenterEntranceTerminateMetric
+    SUBGOAL_METRIC = make_subgoal_metric_class([OutsideCarpenterSubgoal])
+
+class HarvestMoon2AnimalShopEntranceTracker(HarvestMoonTestTracker):
+    TERMINATION_TRUNCATION_METRIC = AnimalShopEntranceTerminateMetric
+    SUBGOAL_METRIC = make_subgoal_metric_class([OutsideAnimalShopSubgoal])
+
+class HarvestMoon2LibraryEntranceTracker(HarvestMoonTestTracker):
+    TERMINATION_TRUNCATION_METRIC = LibraryEntranceTerminateMetric
+    SUBGOAL_METRIC = make_subgoal_metric_class([OutsideLibrarySubgoal])
 
 class HarvestMoon2FlowerShopEntranceTracker(HarvestMoonTestTracker):
     TERMINATION_TRUNCATION_METRIC = FlowerShopEntranceTerminateMetric
