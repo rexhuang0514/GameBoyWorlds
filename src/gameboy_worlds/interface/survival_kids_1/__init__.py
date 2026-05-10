@@ -1,0 +1,1 @@
+from gameboy_worlds.interface.survival_kids_1.environments import SurvivalKidsEnvironment

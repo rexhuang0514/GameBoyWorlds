@@ -63,6 +63,7 @@ class CorePokemonMetrics(MetricGroup):
         """
         return {
             "agent_state": self.current_state,
+            "is_in_menu": self.current_state == AgentState.IN_MENU,
         }
 
     def report_final(self) -> dict:
