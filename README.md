@@ -103,8 +103,6 @@ Next, you must legally acquire ROMs for the GameBoy games from Nintendo (perhaps
 
 * Pokémon Red (save as `PokemonRed.gb`)
 * Pokémon Crystal (save as `PokemonCrystal.gbc`)
-* Survival Kids (save as `SurvivalKids.gbc`)
-* Survival Kids 2 (save as `SurvivalKids2CN.gbc`)
 
 Additionally, our testing environment uses several Pokémon ROM patches / hacks that alter the game in some way. The official way to acquire these can be obtained is by applying a "patch" to the original ROM. After patching the original ROM, you will be left with a `.gb` or `.gbc` file. Once again, despite their widespread availability, we do not advise you to download the pre-patched ROMs. We support:
 * [Pokémon Brown](https://rainbowdevs.com/title/brown/) (save as `PokemonBrown.gbc`)
@@ -112,7 +110,7 @@ Additionally, our testing environment uses several Pokémon ROM patches / hacks 
 * [Pokémon Fool's Gold](https://www.pokecommunity.com/threads/pok%C3%A9mon-fools-gold-a-hack-of-crystal-where-everything-is-familiar-yet-different.433723/) (save as `PokemonFoolsGold.gbc`)
 * [Pokémon Star Beasts](https://www.pokecommunity.com/threads/star-beasts-asteroid-version.530552/) (save as `PokemonStarBeasts.gb`)
 
-Once you have a ROM (`.gb` or `.gbc` file), place it in the appropriate path. For example, the ROM for Pokémon Red should be placed in `<path_to_storage_directory_from_config>/rom_data/pokemon/pokemon_red/PokemonRed.gb`. Survival Kids ROMs should be placed at `<path_to_storage_directory_from_config>/rom_data/survival_kids/survival_kids_1/SurvivalKids.gbc` and `<path_to_storage_directory_from_config>/rom_data/survival_kids/survival_kids_2/SurvivalKids2CN.gbc`. See the [config folder](configs/) for the expected path to each supported game. 
+Once you have a ROM (`.gb` or `.gbc` file), place it in the appropriate path. For example, the ROM for Pokémon Red should be placed in `<path_to_storage_directory_from_config>/rom_data/pokemon_red/PokemonRed.gb`. See the [config folder](configs/) for the expected path to each supported game.
 
 ## Test
 
@@ -127,11 +125,6 @@ To try a headless test / see how a random agent does, try:
 python demos/emulator.py --play_mode random --save_video True # You can see this in headed mode with --headless False
 ```
 The video gets saved to the `sessions` folder of your `storage_dir` directory.
-
-You can also run a supported game variant directly:
-```bash
-python demos/emulator.py --game survival_kids_2 --play_mode random --headless True
-```
 
 You can also test the Gym compatible environment version of this with:
 ```bash
