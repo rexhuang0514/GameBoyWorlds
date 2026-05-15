@@ -62,8 +62,7 @@ class CorePokemonMetrics(MetricGroup):
             dict: A dictionary containing the current agent state.
         """
         return {
-            "agent_state": self.current_state,
-            "is_in_menu": self.current_state == AgentState.IN_MENU,
+            "agent_state": self.current_state
         }
 
     def report_final(self) -> dict:
