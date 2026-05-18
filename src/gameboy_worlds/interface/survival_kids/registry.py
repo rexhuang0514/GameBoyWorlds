@@ -12,11 +12,13 @@ AVAILABLE_ENVIRONMENTS: Dict[str, Dict[str, Type[Environment]]] = {
     "survival_kids_1": {
         "dummy": DummyEnvironment,
         "default": SurvivalKidsEnvironment,
+        "basic": SurvivalKidsEnvironment,
         "test": SurvivalKidsTestEnvironment,
     },
     "survival_kids_2": {
         "dummy": DummyEnvironment,
         "default": SurvivalKidsEnvironment,
+        "basic": SurvivalKidsEnvironment,
         "test": SurvivalKidsTestEnvironment,
     },
 }

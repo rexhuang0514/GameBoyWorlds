@@ -1,0 +1,10 @@
+game,task_category,task,init_state,state_tracker_class,other_disallowed_states,shifted_training_games
+survival_kids_1,menu,Open the inventory,before_inventory,inventory_open_test,,survival_kids_1
+survival_kids_1,interaction,Pick up the item,before_pickup_dialogue,pickup_item_dialogue_test,,survival_kids_1
+survival_kids_1,interaction,Find the bag,before_bag_pickup,bag_icon_test,,survival_kids_1
+survival_kids_1,"menu, interaction",Equip the knife,before_equip_knife,knife_equipped_test,,survival_kids_1
+survival_kids_1,interaction,Cut grass,near_grass,game_viewport_changed_test,,survival_kids_1
+survival_kids_1,interaction,Pick up the canteen,before_canteen_pickup,canteen_pickup_dialogue_test,,survival_kids_1
+survival_kids_1,"menu, survival",Open the canteen action menu,has_canteen_near_water,canteen_action_menu_test,,survival_kids_1
+survival_kids_1,navigation,Clear the first blocked path,before_blocking_grass,chapter1_path_cleared_test,,survival_kids_1
+survival_kids_1,combat,Hunt the animal,before_hunt_animal,animal_killed_test,,survival_kids_1

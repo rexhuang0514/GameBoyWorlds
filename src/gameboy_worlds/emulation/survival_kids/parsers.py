@@ -30,12 +30,64 @@ class SurvivalKidsParser(StateParser):
     MULTI_TARGET_REGIONS: List[Tuple[str, int, int, int, int]] = [
         ("screen", 0, 0, 160, 144),
         ("screen_bottom", 0, 108, 160, 36),
-        ("game_viewport", 0, 0, 160, 108),
+        ("game_viewport", 0, 0, 160, 128),
+        ("status_bar", 0, 128, 160, 16),
+        ("hp_area", 0, 128, 40, 16),
+        ("hunger_area", 0, 136, 42, 8),
+        ("thirst_area", 42, 136, 42, 8),
+        ("stamina_area", 84, 136, 42, 8),
+        ("equipped_items_area", 20, 128, 24, 8),
+        ("pack_icon_area", 144, 128, 16, 16),
+        ("bag_icon_area", 64, 32, 48, 48),
+        ("choose_item_area", 0, 0, 160, 128),
         ("dialogue_area", 8, 112, 144, 28),
+        ("item_action_menu", 0, 0, 64, 56),
+        ("item_action_menu_two_options", 0, 0, 64, 40),
+        ("item_use_menu_area", 0, 84, 160, 56),
+        ("item_action_cursor", 6, 8, 12, 8),
+        ("item_action_options", 18, 8, 42, 28),
         ("menu_area", 0, 0, 160, 144),
     ]
 
-    MULTI_TARGETS: Dict[str, List[str]] = {}
+    MULTI_TARGETS: Dict[str, List[str]] = {
+        "menu_area": [
+            "inventory_open",
+        ],
+        "item_action_menu_two_options": [
+            "take_leave_menu",
+            "canteen_take_leave_menu",
+            "feather_take_leave_menu",
+        ],
+        "dialogue_area": [
+            "pickup_item_dialogue",
+            "canteen_pickup_dialogue",
+            "meat_eaten_dialogue",
+        ],
+        "bag_icon_area": [
+            "bag_icon",
+        ],
+        "equipped_items_area": [
+            "knife_equipped",
+        ],
+        "choose_item_area": [
+            "knife_chosen",
+            "canteen_chosen",
+        ],
+        "item_use_menu_area": [
+            "canteen_action_menu",
+            "canteen_drink_selected",
+            "canteen_use_selected",
+        ],
+        "item_action_menu": [
+            "meat_take_eat_leave_menu",
+            "meat_eat_selected",
+        ],
+        "game_viewport": [
+            "animal_killed",
+            "chapter1_path_cleared",
+            "path_after_blocking_grass",
+        ],
+    }
 
     def __init__(
         self,
@@ -115,7 +167,7 @@ class SurvivalKids2Parser(SurvivalKidsParser):
     """Game state parser for Survival Kids 2 (GBC)."""
 
     VARIANT = "survival_kids_2"
+    MULTI_TARGETS: Dict[str, List[str]] = {}
 
     def __repr__(self) -> str:
         return f"<SurvivalKids2Parser(variant={self.VARIANT})>"
-
