@@ -167,6 +167,9 @@ class Environment(gym.Env, ABC):
                 f"State name '{state_name}' is invalid. State names must be alphanumeric and cannot contain spaces or path characters.",
                 self._parameters,
             )
+        state_name = state_name.replace(
+            "custom_", ""
+        )  # prevent users from accidentally adding the prefix and causing confusion about the actual saved state name.
         state_name = f"custom_{state_name}"
         self._emulator.save_state(state_name=state_name)
         return state_name
@@ -178,6 +181,9 @@ class Environment(gym.Env, ABC):
         Args:
             state_name (str): Name of the state to delete. This should be the name returned by `save_custom_state`.
         """
+        state_name = state_name.replace(
+            "custom_", ""
+        )  # prevent users from accidentally adding the prefix and causing confusion about the actual saved state name.
         state_name = f"custom_{state_name}"
         self._emulator.delete_state(state_name=state_name)
 
