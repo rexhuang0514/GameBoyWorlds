@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 game,task_category,task,init_state,state_tracker_class,shifted_training_games,can_train_from_init_state
 sword_of_hope_1,navigation,Reach the first adjacent room from the start state,navigation_old_house,mill_room_test,sword_of_hope_2,True
 sword_of_hope_1,navigation,Navigate from the Old Man's Room to the Shaman's House,navigation_old_house,shaman_room_test,sword_of_hope_2,True
@@ -145,4 +144,3 @@ sword_of_hope_2,"menu, interaction, hard",In weapons shop cursor on second weapo
 sword_of_hope_2,"menu, interaction, hard",In weapons shop cursor on third weapon (CPR Sword) - traverse first and second,weapons_shop_example,cursor_on_third_weapon_test,,sword_of_hope_1
 sword_of_hope_2,"interaction, menu, hard",Use LOOK then cursor on TREE target in target list,hit_tree_example,look_tree_target_test,,sword_of_hope_1
 sword_of_hope_2,"menu, navigation, reasoning, hard",View Power stats first then exp page then cast Motion (3-subgoal composite),lvl2_overworld,view_power_then_cast_motion_test,,sword_of_hope_1
->>>>>>> Stashed changes
