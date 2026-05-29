@@ -230,7 +230,11 @@ class SurvivalKids2Parser(SurvivalKidsParser):
     """Game state parser for Survival Kids 2 (GBC)."""
 
     VARIANT = "survival_kids_2"
-    MULTI_TARGETS: Dict[str, List[str]] = {}
+    MULTI_TARGETS: Dict[str, List[str]] = {
+        "screen": [
+            "night_reference",
+        ],
+    }
 
     def __repr__(self) -> str:
         return f"<SurvivalKids2Parser(variant={self.VARIANT})>"

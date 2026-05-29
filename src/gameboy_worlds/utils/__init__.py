@@ -194,7 +194,7 @@ def get_benchmark_tasks_dfs(parameters: dict = None) -> dict[str, pd.DataFrame]:
     for module_path in module_paths:
         if module_path.endswith(".csv"):
             tasks_filepath = os.path.join(project_root, "benchmark/tests", module_path)
-            benchmark_name = os.path.splitext(module_path)[0]
+            benchmark_name = module_path.strip(".csv")
             benchmark_dfs[benchmark_name] = pd.read_csv(tasks_filepath)
     return benchmark_dfs
 

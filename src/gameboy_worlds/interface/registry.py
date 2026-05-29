@@ -316,8 +316,7 @@ def get_shifted_environments_kwargs(
 import os
 
 AVAILABLE_BENCHMARKS = [
-    os.path.splitext(item)[0]
+    item.strip(".csv")
     for item in os.listdir(_project_parameters["project_root"] + "/benchmark/tests")
-    if item.endswith(".csv")
 ]
 """ List of available benchmark names. Populated by the files in benchmark/tests. """

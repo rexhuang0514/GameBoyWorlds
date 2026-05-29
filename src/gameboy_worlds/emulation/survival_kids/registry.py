@@ -133,6 +133,7 @@ AVAILABLE_STATE_TRACKERS: Dict[str, Dict[str, Type[StateTracker]]] = {
         "drink_water_test": SurvivalKidsDrinkWaterTracker,
         "stamina_changed_test": SurvivalKidsStaminaChangedTracker,
         "game_viewport_changed_test": SurvivalKidsGameViewportChangedTracker,
+        "night_reference_test": SurvivalKidsNightReferenceTracker,
     },
 }
 
