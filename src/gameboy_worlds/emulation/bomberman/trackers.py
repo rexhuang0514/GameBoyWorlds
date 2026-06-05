@@ -19,7 +19,11 @@ from gameboy_worlds.emulation.bomberman.test_metrics import (
     DialogueActiveTerminateMetric,
     EnterCampTerminateMetric,
     BoxPickedUpTerminateMetric,
+    CliffBoxPickedUpTerminateMetric,
+    HardSwitchActivatedTerminateMetric,
     EnterCaveTerminateMetric,
+    EnterRoomTerminateMetric,
+    EnterRuinsTerminateMetric,
     SaveNpcActiveTerminateMetric,
     ButtonRegionChangedTerminateMetric,
     SwitchActivatedTerminateMetric,
@@ -28,7 +32,7 @@ from gameboy_worlds.emulation.bomberman.test_metrics import (
     HudBombCountChangedTerminateMetric,
     HudBottomRightChangedTerminateMetric,
     HudChangedTerminateMetric,
-    HudPocketEnemyCountChangedTerminateMetric,
+    HudPocketEnemyKillTerminateMetric,
     HudEnemyCountChangedTerminateMetric,
     HudFireChangedTerminateMetric,
     HudHeartChangedTerminateMetric,
@@ -166,7 +170,7 @@ class BombermanPocketHudChangedTestTracker(BombermanPocketBaseTestTracker):
 
 
 class BombermanPocketHudEnemyCountChangedTestTracker(BombermanPocketBaseTestTracker):
-    TERMINATION_TRUNCATION_METRIC = HudPocketEnemyCountChangedTerminateMetric
+    TERMINATION_TRUNCATION_METRIC = HudPocketEnemyKillTerminateMetric
 
 
 class BombermanPocketHudBottomRightChangedTestTracker(
@@ -242,6 +246,14 @@ class BombermanQuestEnterCaveTestTracker(BombermanQuestBaseTestTracker):
     TERMINATION_TRUNCATION_METRIC = EnterCaveTerminateMetric
 
 
+class BombermanQuestEnterRoomTestTracker(BombermanQuestBaseTestTracker):
+    TERMINATION_TRUNCATION_METRIC = EnterRoomTerminateMetric
+
+
+class BombermanQuestEnterRuinsTestTracker(BombermanQuestBaseTestTracker):
+    TERMINATION_TRUNCATION_METRIC = EnterRuinsTerminateMetric
+
+
 class BombermanQuestButtonRegionChangedTestTracker(BombermanQuestBaseTestTracker):
     TERMINATION_TRUNCATION_METRIC = ButtonRegionChangedTerminateMetric
 
@@ -252,6 +264,14 @@ class BombermanQuestSwitchActivatedTestTracker(BombermanQuestBaseTestTracker):
 
 class BombermanQuestBoxPickedUpTestTracker(BombermanQuestBaseTestTracker):
     TERMINATION_TRUNCATION_METRIC = BoxPickedUpTerminateMetric
+
+
+class BombermanQuestCliffBoxPickedUpTestTracker(BombermanQuestBaseTestTracker):
+    TERMINATION_TRUNCATION_METRIC = CliffBoxPickedUpTerminateMetric
+
+
+class BombermanQuestHardSwitchActivatedTestTracker(BombermanQuestBaseTestTracker):
+    TERMINATION_TRUNCATION_METRIC = HardSwitchActivatedTerminateMetric
 
 
 class BombermanQuestSaveNpcTestTracker(BombermanQuestBaseTestTracker):

@@ -219,6 +219,113 @@ class WenttoOfficeTerminationMetric(RegionMatchTerminationOnlyMetric):
     _TERMINATION_NAMED_REGION = "dialogue_box_area"
     _TERMINATION_TARGET_NAME = "stood_in_front_office"
 
+class EnteredWestendTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "entered_westend"
+
+class OpenedElevatorDoorTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_elevator_door"
+
+class EnteredElevatorTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "entered_elevator"
+
+class ClosedElevatorDoorTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "closed_elevator_door"
+
+class CheckedPhotoTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "checked_photo"
+
+class ShotDoorTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "game_screen_area"
+    _TERMINATION_TARGET_NAME = "shot_door"
+
+class OpenedDeskTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_desk"
+
+class UnlockedOfficeDoorTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "unlocked_office_door"
+
+class MadeMedicineTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "made_medicine"
+
+class TakenMedicineTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "taken_medicine"
+
+class ShotLockTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "game_screen_area"
+    _TERMINATION_TARGET_NAME = "shot_lock"
+
+class OpenedDiaryTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_diary"
+
+class ShotGrimyOfficeDoorTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "game_screen_area"
+    _TERMINATION_TARGET_NAME = "shot_door"
+
+class CheckedDeadManTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "checked_dead_man"
+
+class OpenedCabinetTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_cabinet"
+
+class ExitedGrimyOfficeTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "exited_grimy_office"
+
+class OpenedWallSafeTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_wall_safe"
+
+class OpenedCarTrunkTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu1StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_car_trunk"
 
 # deja_vu_2 termination metrics
 class OpenedTrenchCoatPocketTerminationMetric(RegionMatchTerminationOnlyMetric):
@@ -419,9 +526,92 @@ class CheckedSignTerminationMetric(RegionMatchTerminationOnlyMetric):
     _TERMINATION_NAMED_REGION = "dialogue_box_area"
     _TERMINATION_TARGET_NAME = "checked_sign"
 
+class ChattedSellerTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "chatted_seller"
+
+class BoughtNewspaperTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "bought_newspaper"
+
+class TakenNewsclip4TerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "taken_newsclip4"
+
+class EnteredChicagoTaxiTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "entered_chicago_taxi"
+
+class ChattedTaxiDriverTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "chatted_taxi_driver"
+
+class EnteredMiddleRoomTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "entered_middle_room"
+
+class LoadedGunTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "loaded_gun"
+
+class OpenedLockTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_lock"
+
+class HitBoardTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "hit_board"
+
+class OpenedTelephoneTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_telephone"
+
+class OpenedBoxTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_box"
+
+class OpenedPocketKnifeTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_pocket_knife"
+
+class OpenedDoorByKnifeTerminationMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = DejaVu2StateParser
+
+    _TERMINATION_NAMED_REGION = "dialogue_box_area"
+    _TERMINATION_TARGET_NAME = "opened_door_by_knife"
+
 
 # subgoal classes
 # subgoal classes with multiple region match requirements
+class UnlockedMiddleRoomDoorSubGoal(AnyRegionMatchSubGoal):
+    NAME = "unlocked_middle_room_door"
+    _NAMED_REGIONS = ["dialogue_box_area"]
+    _TARGET_NAMES = ["unlocked_middle_door"]
+
 class InCoatPocketMenuSubGoal(AnyRegionMatchSubGoal):
     NAME = "in_coat_pocket_menu"
     _NAMED_REGIONS = ["menu_title_area"]
@@ -462,10 +652,15 @@ class Selected2ChipsSubGoal(AnyRegionMatchSubGoal):
     _NAMED_REGIONS = ["dialogue_box_area"]
     _TARGET_NAMES = ["selected_2_chips"]
 
-class OpenedDoorSubGoal(AnyRegionMatchSubGoal):
-    NAME = "opened_door"
+class OpenedWestendDoorSubGoal(AnyRegionMatchSubGoal):
+    NAME = "opened_westend_door"
     _NAMED_REGIONS = ["dialogue_box_area"]
-    _TARGET_NAMES = ["opened_door"]
+    _TARGET_NAMES = ["opened_westend_door"]
+
+class OpenedShermanDoorSubGoal(AnyRegionMatchSubGoal):
+    NAME = "opened_sherman_door"
+    _NAMED_REGIONS = ["dialogue_box_area"]
+    _TARGET_NAMES = ["opened_sherman_door"]
 
 # subgoal classes for no action selected
 class NoActionInCellarSubGoal(AnyRegionMatchSubGoal):
@@ -491,10 +686,47 @@ class NoActionInLobbySubGoal(AnyRegionMatchSubGoal):
 class NoActionInShermanLobbySubGoal(AnyRegionMatchSubGoal):
     NAME = "no_action_in_sherman_lobby"
     _NAMED_REGIONS = ["no_action"]
-    _TARGET_NAMES = ["at_sherman_lobby"]
+    _TARGET_NAMES = ["in_sherman_lobby"]
 
+class NoActionInWestendLobbySubGoal(AnyRegionMatchSubGoal):
+    NAME = "no_action_in_westend_lobby"
+    _NAMED_REGIONS = ["no_action"]
+    _TARGET_NAMES = ["in_westend_lobby"]
+
+class NoActionInGrimyOfficeSubGoal(AnyRegionMatchSubGoal):
+    NAME = "no_action_in_grimy_office"
+    _NAMED_REGIONS = ["no_action"]
+    _TARGET_NAMES = ["in_grimy_office"]
 
 # subgoal classes with single region match requirement
+class UsingKnifeSubGoal(SingleRegionMatchSubGoal):
+    NAME = "using_knife"
+    _NAMED_REGION = "using_knife_item"
+
+class UsingKey4SubGoal(SingleRegionMatchSubGoal):
+    NAME = "using_key4"
+    _NAMED_REGION = "using_key4_item"
+
+class UsingNote3SubGoal(SingleRegionMatchSubGoal):
+    NAME = "using_note3"
+    _NAMED_REGION = "using_note3_item"
+
+class UsingKey2SubGoal(SingleRegionMatchSubGoal):
+    NAME = "using_key2"
+    _NAMED_REGION = "using_key2_item"
+
+class UsingKey1SubGoal(SingleRegionMatchSubGoal):
+    NAME = "using_key1"
+    _NAMED_REGION = "using_key1_item"
+
+class UsingCashSubGoal(SingleRegionMatchSubGoal):
+    NAME = "using_cash"
+    _NAMED_REGION = "using_cash_item"
+
+class UsingBulletSubGoal(SingleRegionMatchSubGoal):
+    NAME = "using_bullet"
+    _NAMED_REGION = "using_bullet_item"
+
 class PointedAtCoatSubGoal(SingleRegionMatchSubGoal):
     NAME = "pointed_at_coat"
     _NAMED_REGION = "selected_coat_item"
@@ -582,6 +814,10 @@ class PointedAt45OnMapSubGoal(SingleRegionMatchSubGoal):
 class PointedAt52OnMapSubGoal(SingleRegionMatchSubGoal):
     NAME = "pointed_at_52_on_map"
     _NAMED_REGION = "pointed_at_52_on_map"
+
+class PointedAt24OnMapSubGoal(SingleRegionMatchSubGoal):
+    NAME = "pointed_at_24_on_map"
+    _NAMED_REGION = "pointed_at_24_on_map"
 
 
 # Action selection subgoals in menu and normal have the same target names
