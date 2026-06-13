@@ -1,6 +1,9 @@
 from typing import Optional
 
-from gameboy_worlds.emulation.pokemon.parsers import PokemonRedStateParser
+from gameboy_worlds.emulation.pokemon.parsers import (
+    PokemonRedStateParser,
+    PokemonPrismStateParser,
+)
 from gameboy_worlds.emulation.tracker import (
     RegionMatchTerminationOnlyMetric,
     TerminationMetric,
@@ -20,6 +23,12 @@ class PokemonCenterTerminateMetric(RegionMatchTerminationOnlyMetric):
     _TERMINATION_NAMED_REGION = "screen_bottom_half"
     _TERMINATION_TARGET_NAME = "viridian_pokemon_center_entrance"
 
+
+class PokemonPrismHealingTerminateMetric(RegionMatchTerminationOnlyMetric):
+    REQUIRED_PARSER = PokemonPrismStateParser
+
+    _TERMINATION_NAMED_REGION = "screen_middle"
+    _TERMINATION_TARGET_NAME = "prism_healing_complete"
 
 class OutsideViridianCenterSubgoal(AnyRegionMatchSubGoal):
     NAME = "outside_viridian_center"

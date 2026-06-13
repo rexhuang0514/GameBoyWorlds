@@ -20,6 +20,7 @@ from gameboy_worlds.emulation.pokemon.test_metrics import (
     BoughtPotionAtPewterPokemartTerminateMetric,
     UsedPotionOnCharmanderTerminateMetric,
     OpenMapTerminateMetric,
+    PokemonPrismHealingTerminateMetric,
 )
 
 from gameboy_worlds.emulation.pokemon.base_metrics import (
@@ -99,6 +100,9 @@ class PokemonRedCenterTestTracker(PokemonTestTracker):
 
     TERMINATION_TRUNCATION_METRIC = PokemonCenterTerminateMetric
     SUBGOAL_METRIC = make_subgoal_metric_class([OutsideViridianCenterSubgoal])
+
+class PokemonPrismHealingTracker(PokemonTestTracker):
+    TERMINATION_TRUNCATION_METRIC = PokemonPrismHealingTerminateMetric
 
 
 class PokemonRedMtMoonTestTracker(PokemonTestTracker):
